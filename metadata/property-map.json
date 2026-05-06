@@ -1,0 +1,28 @@
+{
+  "repo": "zigcodec",
+  "language": "Zig",
+  "category": "Blockchain tooling",
+  "goal": "Encode and decode Base58Check payloads with checksum diagnostics.",
+  "weights": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 2
+  },
+  "thresholds": {
+    "ship": 162,
+    "watch": 114
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}
