@@ -1,0 +1,73 @@
+{
+  "repo": "zigcodec",
+  "language": "Zig",
+  "category": "Blockchain tooling",
+  "goal": "Encode and decode Base58Check payloads with checksum diagnostics.",
+  "review_model": {
+    "terms": [
+      "event finality",
+      "nonce pressure",
+      "settlement risk",
+      "proof depth"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "event finality",
+      "signal": 57,
+      "slack": 24,
+      "drag": 8,
+      "confidence": 77,
+      "score": 191,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "nonce pressure",
+      "signal": 60,
+      "slack": 31,
+      "drag": 22,
+      "confidence": 53,
+      "score": 138,
+      "lane": "watch"
+    },
+    {
+      "name": "edge",
+      "focus": "settlement risk",
+      "signal": 68,
+      "slack": 27,
+      "drag": 22,
+      "confidence": 59,
+      "score": 156,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "proof depth",
+      "signal": 67,
+      "slack": 27,
+      "drag": 10,
+      "confidence": 61,
+      "score": 192,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "event finality",
+      "signal": 64,
+      "slack": 53,
+      "drag": 9,
+      "confidence": 49,
+      "score": 203,
+      "lane": "ship"
+    }
+  ]
+}
